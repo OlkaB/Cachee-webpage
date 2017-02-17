@@ -32,7 +32,6 @@ html, body {
 }
 
 body {
-  background-color: pink;
   font-family: 'Raleway', sans-serif;
   line-height: 160%;
   font-size: 16px;
@@ -210,12 +209,15 @@ nav {
 #ourServices{
   background: #70bfff;
   padding: 80px 0;
-  .col-xs-12.col-sm-5{
+  .col-xs-12.col-md-5{
     height: 100%;
     h2{
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+    }
+    img{
+      margin: auto;
     }
   }
   .col-xs-12.col-sm-4 {
@@ -225,6 +227,7 @@ nav {
 
 .serviceBttn{
   height: 80px;
+  max-width: 350px;
   background: white;
   margin: 10px auto;
   text-align: center;
@@ -245,10 +248,24 @@ nav {
     top: 1px;
     left: 1px;
   }
-  .col-xs-3 {
+  .bttnTxt {
+    float: left;
+    width: 100%;
+  }
+  .bttnIcon {
     border-left: 1px solid #9d9d9d;
-    height: 100%;
     padding: 15px;
+    width: 100px;
+    float: right;
+    height: 100%;
+    p{
+      display: block;
+      float: right;
+    }
+    img{
+      width: 50px;
+      height: auto;
+    }
   }
 }
 
@@ -490,13 +507,13 @@ footer {
     @include fontSize(60);
     text-align: center;
   }
-  .container-fluid {
+  .container-fluid, .sectionHeader, .wrapper  {
     width: 100%;
   }
   .wrapper {
-    width: 100%;
     padding: 10px;
   }
+
   /* ------- navigation ------- */
   nav {
     .brandLogo{
@@ -521,16 +538,23 @@ footer {
     background-size: auto;
   }
   #headerContent {
-   height: 100vh;
+   height: auto;
    padding-bottom: 70px;
    p{
     max-width: 300px;
   }
 }
 
+#aboutUs, #contact, #blog, #gallery, #ourServices {
+  padding: 40px 0;
+  p {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
 /* ------- about ------- */
 #aboutUs {
-  padding: 40px 0;
   h2{
     padding-top: 0;
   }
@@ -539,13 +563,22 @@ footer {
     margin-top: 20px;
   }
   p {
-    max-width: 500px;
-    margin: auto;
+
   }
 }
+
+
+/* ------- SERVICES ------- */
+#ourServices {
+  .col-xs-12.col-md-5{
+    h2{
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+  } 
 }
-
-
+}
 /*-- dedicated to: blog --*/
 @media (max-width: 400px) {
   .blogItem {
