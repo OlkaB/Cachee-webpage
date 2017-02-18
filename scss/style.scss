@@ -573,7 +573,6 @@ footer {
   }
 }
 
-
 /* ------- SERVICES ------- */
 #ourServices {
   .col-xs-12.col-md-5{
@@ -584,10 +583,42 @@ footer {
     }
   } 
 }
+
+/* ------- CONTACT ------- */
+ .contactData {
+  margin-top: 60px;
+ }
+ #contact form {
+   max-width: 500px;
+   margin: auto;
+  }
 }
-/*-- dedicated to: blog --*/
+
+
+
+
+
+
+
+/*-- very small ones --*/
 @media (max-width: 400px) {
   .blogItem {
     width: 90%;
   }
+  .serviceBttn {
+    width: 180px;
+    .bttnTxt {
+      width: 130px;
+      p{
+        @include fontSize(22);
+      }
+    }
+    .bttnIcon {
+      width: 50px;
+      padding: 25px 5px;
+      img{
+      width: 30px;
+    }
+  }
+}
 }
