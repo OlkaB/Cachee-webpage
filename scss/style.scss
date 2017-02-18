@@ -49,11 +49,6 @@ body,
   max-width: 1200px;
 }
 
-.flexVerticalCenter {
-  display: flex;
-  align-items: center;
-}
-
 h1 {
   @include fontSize(60);
   font-weight: 900;
@@ -209,25 +204,31 @@ nav {
 #ourServices{
   background: #70bfff;
   padding: 80px 0;
-  .col-xs-12.col-md-5{
+  .ourServicesheader{
     height: 100%;
     h2{
       position: absolute;
+      width: 100%;
       top: 50%;
-      transform: translateY(-50%);
+      left: 30%;
+      transform: translate(-20%, -50%);
     }
-    img{
+    .imgMaxWidth{
+      max-width: 400px;
       margin: auto;
+      img{
+        margin: auto;
+      }
     }
   }
-  .col-xs-12.col-sm-4 {
-    padding-top: 100px;
+  .col-xs-12.col-md-6.col-md-pull-5{
+    margin-top: 50px;
   }
 }
 
 .serviceBttn{
   height: 80px;
-  max-width: 350px;
+  width: 350px;
   background: white;
   margin: 10px auto;
   text-align: center;
@@ -250,7 +251,16 @@ nav {
   }
   .bttnTxt {
     float: left;
-    width: 100%;
+    width: 250px;
+    height: 100%;
+    display: table;
+    p{
+      font-weight: 700;
+      @include fontSize(26);
+      margin: 0;
+      vertical-align: middle;
+      display: table-cell;
+    }
   }
   .bttnIcon {
     border-left: 1px solid #9d9d9d;
@@ -258,10 +268,6 @@ nav {
     width: 100px;
     float: right;
     height: 100%;
-    p{
-      display: block;
-      float: right;
-    }
     img{
       width: 50px;
       height: auto;
@@ -572,10 +578,10 @@ footer {
 #ourServices {
   .col-xs-12.col-md-5{
     h2{
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-  }
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+    }
   } 
 }
 }
