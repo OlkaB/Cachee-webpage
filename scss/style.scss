@@ -99,8 +99,11 @@ a, a:link, a:hover, a:active, a:focus {
 
 /* ----------- HEADER ----------- */
 header {
-  background: url('../images/bcgrndHead.jpg') center center no-repeat fixed;
+  background-image: url('../images/bcgrndHead.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 /* navigation */
